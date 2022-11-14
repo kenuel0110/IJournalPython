@@ -162,22 +162,28 @@ def getLessons(excel_file_List):
         cursor = 0
         while cursor < 8:
             item_mon = str(listInf_sheet[f"C{11 + cursor}"].value)
-            item_mon_list = item_mon.split(' ')
+            item_mon_list = re.sub(r'\s+', ' ', item_mon)
+            item_mon_list = item_mon_list.split(' ')
 
             item_tue = str(listInf_sheet[f"C{20 + cursor}"].value)
-            item_tue_list = item_tue.split(' ')
+            item_tue_list = re.sub(r'\s+', ' ', item_tue)
+            item_tue_list = item_tue_list.split(' ')
 
             item_wed = str(listInf_sheet[f"C{29 + cursor}"].value)
-            item_wed_list = item_wed.split(' ')
+            item_wed_list = re.sub(r'\s+', ' ', item_wed)
+            item_wed_list = item_wed_list.split(' ')
 
             item_thu = str(listInf_sheet[f"C{38 + cursor}"].value)
-            item_thu_list = item_thu.split(' ')
+            item_thu_list = re.sub(r'\s+', ' ', item_thu)
+            item_thu_list = item_thu_list.split(' ')
 
             item_fri = str(listInf_sheet[f"C{47 + cursor}"].value)
-            item_fri_list = item_fri.split(' ')
+            item_fri_list = re.sub(r'\s+', ' ', item_fri)
+            item_fri_list = item_fri_list.split(' ')
 
             item_sat = str(listInf_sheet[f"C{56 + cursor}"].value)
-            item_sat_list = item_sat.split(' ')
+            item_sat_list = re.sub(r'\s+', ' ', item_sat)
+            item_sat_list = item_sat_list.split(' ')
 
             if (item_mon != "None"):
                 if (item_mon.find("Иностранный язык") != -1):
@@ -342,22 +348,28 @@ def getLessons(excel_file_List):
 
         while cursor < 8:
             item_mon = str(listInf_sheet[f"C{11 + cursor}"].value)
+            item_mon_list = re.sub(r'\s+', ' ', item_mon)
             item_mon_list = item_mon.split(' ')
 
             item_tue = str(listInf_sheet[f"C{20 + cursor}"].value)
-            item_tue_list = item_tue.split(' ')
+            item_tue_list = re.sub(r'\s+', ' ', item_tue)
+            item_tue_list = item_tue_list.split(' ')
 
             item_wed = str(listInf_sheet[f"C{29 + cursor}"].value)
-            item_wed_list = item_wed.split(' ')
+            item_wed_list = re.sub(r'\s+', ' ', item_wed)
+            item_wed_list = item_wed_list.split(' ')
 
             item_thu = str(listInf_sheet[f"C{38 + cursor}"].value)
-            item_thu_list = item_thu.split(' ')
+            item_thu_list = re.sub(r'\s+', ' ', item_thu)
+            item_thu_list = item_thu_list.split(' ')
 
             item_fri = str(listInf_sheet[f"C{47 + cursor}"].value)
-            item_fri_list = item_fri.split(' ')
+            item_fri_list = re.sub(r'\s+', ' ', item_fri)
+            item_fri_list = item_fri_list.split(' ')
 
             item_sat = str(listInf_sheet[f"C{56 + cursor}"].value)
-            item_sat_list = item_sat.split(' ')
+            item_sat_list = re.sub(r'\s+', ' ', item_sat)
+            item_sat_list = item_sat_list.split(' ')
 
             if (item_mon != "None"):
                 if (item_mon.find("Иностранный язык") != -1):
