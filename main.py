@@ -86,7 +86,7 @@ def dateLessons():
     excel_file_List = openpyxl.load_workbook(f"static/zip/ОЧНИКИ/Расписание занятий/{files_list[0]}")
     sheetNames = excel_file_List.sheetnames
     listInf_sheet = excel_file_List[sheetNames[3]]
-    dateString = listInf_sheet["C65"].value
+    dateString = listInf_sheet["C67"].value         # Получение данных (знаменатель/числитель) из таблицы
     dateString = dateString.split()
     dateString = dateString[8:]
 
