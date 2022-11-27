@@ -1,0 +1,13 @@
+python_jwt
+gcloud
+sseclient
+Crypto
+pycryptodome
+openpyxl
+xlrd
+progressbar
+requests_toolbelt
+bs4
+firebase
+requests
+urllib3 
