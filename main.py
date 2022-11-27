@@ -6,6 +6,7 @@
 #openpyxl
 #xlrd
 #progressbar
+#requests_toolbelt
 
 #bs4
 
@@ -680,10 +681,10 @@ our_cabinets = []
 def getTeachers(end_row, cur, col):
     files_list = os.listdir("static/zip/ОЧНИКИ")
     file_date = files_list[0].split(' ')
-    if(date_now == file_date[2]):
-        excel_file = xlrd.open_workbook(f"static/zip/ОЧНИКИ/{files_list[0]}")
-    else:
-        excel_file = xlrd.open_workbook(f"static/zip/ОЧНИКИ/{files_list[1]}")
+    #if(date_now == file_date[2]):
+    excel_file = xlrd.open_workbook(f"static/zip/ОЧНИКИ/{files_list[0]}")
+    #else:
+    #    excel_file = xlrd.open_workbook(f"static/zip/ОЧНИКИ/{files_list[1]}")
     list1_sheet = excel_file.sheet_by_index(0)
     cursor = cur
     while cursor < end_row:
@@ -793,7 +794,9 @@ def getData():
 
     bar.finish()
 
-seconds = 10
+timer = 10
+
+seconds = timer
 os.system('cls')
 
 while 1==1:
@@ -813,7 +816,7 @@ while 1==1:
             shutil.rmtree('/static', ignore_errors=True)
             getDataTimetable()
             print("\nРасписание обновлено")
-            seconds = 10
+            seconds = timer
             os.system('cls')
         except:
             print("\nПроизошла ошибка обновления, производиться новая попытка")
