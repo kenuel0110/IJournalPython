@@ -794,7 +794,7 @@ def getData():
 
     bar.finish()
 
-timer = 10
+timer = 3800
 
 seconds = timer
 os.system('cls')
